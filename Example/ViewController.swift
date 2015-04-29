@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var isItDark: UILabel!
+    @IBOutlet weak var findOut: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.findOut.setTitle("Find Out!", forState: UIControlState.Normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func findOutTapped(sender: AnyObject) {
+        self.findOut.setTitle("Yes!", forState: UIControlState.Normal)
+    }
 
 }
 

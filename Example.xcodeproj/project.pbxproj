@@ -13,6 +13,8 @@
 		3732A0C21AF097D00021DFB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3732A0C11AF097D00021DFB6 /* Images.xcassets */; };
 		3732A0C51AF097D00021DFB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3732A0C31AF097D00021DFB6 /* LaunchScreen.xib */; };
 		3732A0D11AF097D00021DFB6 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3732A0D01AF097D00021DFB6 /* ExampleTests.swift */; };
+		3732A0DB1AF09A690021DFB6 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3732A0DA1AF09A690021DFB6 /* Raleway-ExtraLight.ttf */; };
+		3732A0DD1AF09CB60021DFB6 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3732A0DC1AF09CB60021DFB6 /* Raleway-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		3732A0CA1AF097D00021DFB6 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3732A0CF1AF097D00021DFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3732A0D01AF097D00021DFB6 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
+		3732A0DA1AF09A690021DFB6 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "../../../../../Library/Fonts/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3732A0DC1AF09CB60021DFB6 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "../../../../../Library/Fonts/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		3732A0B81AF097D00021DFB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3732A0DA1AF09A690021DFB6 /* Raleway-ExtraLight.ttf */,
+				3732A0DC1AF09CB60021DFB6 /* Raleway-ExtraBold.ttf */,
 				3732A0B91AF097D00021DFB6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3732A0DB1AF09A690021DFB6 /* Raleway-ExtraLight.ttf in Resources */,
+				3732A0DD1AF09CB60021DFB6 /* Raleway-ExtraBold.ttf in Resources */,
 				3732A0C01AF097D00021DFB6 /* Main.storyboard in Resources */,
 				3732A0C51AF097D00021DFB6 /* LaunchScreen.xib in Resources */,
 				3732A0C21AF097D00021DFB6 /* Images.xcassets in Resources */,

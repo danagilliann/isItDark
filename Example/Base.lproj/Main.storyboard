@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Raleway-ExtraBold.ttf">
+            <string>Raleway-ExtraBold</string>
+        </mutableArray>
+        <mutableArray key="Raleway-ExtraLight.ttf">
+            <string>Raleway-ExtraLight</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +23,71 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it dark?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uj-yt-jIO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="134" y="230" width="132" height="35"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-oL-fgx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraBold" family="Raleway" pointSize="48"/>
+                                <state key="normal" title="FIND OUT">
+                                    <color key="titleColor" red="0.50679147194900098" green="0.92011916035353536" blue="0.88092744839610548" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="90" y="266" width="221" height="68"/>
+                                </variation>
+                                <connections>
+                                    <action selector="findOutTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ec4-us-uVy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3uj-yt-jIO" secondAttribute="centerX" id="3dz-7r-sHH"/>
+                            <constraint firstItem="3uj-yt-jIO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="210" id="GT1-ZN-jhw"/>
+                            <constraint firstAttribute="centerY" secondItem="XXo-oL-fgx" secondAttribute="centerY" id="SHT-Ry-BGp"/>
+                            <constraint firstAttribute="centerX" secondItem="XXo-oL-fgx" secondAttribute="centerX" id="lZq-h0-YgL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3uj-yt-jIO"/>
+                                <exclude reference="XXo-oL-fgx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3dz-7r-sHH"/>
+                                <exclude reference="GT1-ZN-jhw"/>
+                                <exclude reference="SHT-Ry-BGp"/>
+                                <exclude reference="lZq-h0-YgL"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3uj-yt-jIO"/>
+                                <include reference="XXo-oL-fgx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3dz-7r-sHH"/>
+                                <include reference="GT1-ZN-jhw"/>
+                                <include reference="SHT-Ry-BGp"/>
+                                <include reference="lZq-h0-YgL"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="findOut" destination="XXo-oL-fgx" id="ESV-vm-His"/>
+                        <outlet property="isItDark" destination="3uj-yt-jIO" id="Gr3-5S-j1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="366" y="339"/>
         </scene>
     </scenes>
 </document>
