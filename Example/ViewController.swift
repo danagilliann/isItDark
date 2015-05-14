@@ -11,17 +11,16 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var isItDark: UILabel!
-    @IBOutlet weak var findOut: UIButton!
     @IBOutlet weak var backButton: UIButton!
-    
+    @IBOutlet weak var enterTime: UITextField!
+    @IBOutlet weak var response: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        self.findOut.setTitle("Find Out!", forState: UIControlState.Normal)
         self.backButton.setTitle(" ", forState: UIControlState.Normal)
+        self.isItDark.text = "Is it dark?"
+        self.response.text = " "
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,16 +31,10 @@ class ViewController: UIViewController {
     @IBAction func backButton(sender: AnyObject) {
         viewDidLoad()
     }
-    @IBAction func findOutTapped(sender: AnyObject) {
-        var time = 18
-        if time >= 18 {
-            self.findOut.setTitle("Yes!", forState: UIControlState.Normal)
-            self.backButton.setTitle("BACK", forState: UIControlState.Normal)
-        } else {
-            self.findOut.setTitle("No.", forState: UIControlState.Normal)
-            self.backButton.setTitle("BACK", forState: UIControlState.Normal)
-        }
-        
+
+    @IBAction func enterTime(sender: AnyObject) {
+        //find a way to activate this
+        //probably through if/else statement
     }
     
 

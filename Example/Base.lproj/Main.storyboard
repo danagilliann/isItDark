@@ -10,6 +10,7 @@
         <mutableArray key="Raleway-ExtraLight.ttf">
             <string>Raleway-ExtraLight</string>
             <string>Raleway-ExtraLight</string>
+            <string>Raleway-ExtraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -31,23 +32,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="134" y="230" width="132" height="35"/>
+                                    <rect key="frame" x="66" y="230" width="268" height="36"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-oL-fgx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="Raleway-ExtraBold" family="Raleway" pointSize="48"/>
-                                <state key="normal" title="FIND OUT">
-                                    <color key="titleColor" red="0.50679147194900098" green="0.92011916035353536" blue="0.88092744839610548" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="90" y="266" width="221" height="68"/>
-                                </variation>
-                                <connections>
-                                    <action selector="findOutTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ec4-us-uVy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRK-FH-YRj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
@@ -59,27 +46,45 @@
                                     <action selector="backButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oWB-Al-ofr"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="as8-3r-sOp">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enterTime:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="53g-SU-TJ5"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSz-fU-9Io">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraBold" family="Raleway" pointSize="42"/>
+                                <color key="textColor" red="0.27707995661625023" green="0.8586845012626263" blue="0.82781809135488926" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="266" width="116" height="44"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="3uj-yt-jIO" secondAttribute="centerX" id="3dz-7r-sHH"/>
+                            <constraint firstItem="as8-3r-sOp" firstAttribute="top" secondItem="3uj-yt-jIO" secondAttribute="bottom" constant="20" id="5yn-nU-AYL"/>
                             <constraint firstAttribute="centerX" secondItem="QRK-FH-YRj" secondAttribute="centerX" id="8QW-87-9D0"/>
                             <constraint firstItem="3uj-yt-jIO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="210" id="GT1-ZN-jhw"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QRK-FH-YRj" secondAttribute="bottom" constant="141" id="M09-H7-kQk"/>
-                            <constraint firstAttribute="centerY" secondItem="XXo-oL-fgx" secondAttribute="centerY" id="SHT-Ry-BGp"/>
-                            <constraint firstAttribute="centerX" secondItem="XXo-oL-fgx" secondAttribute="centerX" id="lZq-h0-YgL"/>
+                            <constraint firstAttribute="centerX" secondItem="as8-3r-sOp" secondAttribute="centerX" id="fq6-YS-haO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3uj-yt-jIO"/>
-                                <exclude reference="XXo-oL-fgx"/>
                                 <exclude reference="QRK-FH-YRj"/>
+                                <exclude reference="as8-3r-sOp"/>
+                                <exclude reference="oSz-fU-9Io"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3dz-7r-sHH"/>
                                 <exclude reference="GT1-ZN-jhw"/>
-                                <exclude reference="SHT-Ry-BGp"/>
-                                <exclude reference="lZq-h0-YgL"/>
+                                <exclude reference="5yn-nU-AYL"/>
+                                <exclude reference="fq6-YS-haO"/>
                                 <exclude reference="8QW-87-9D0"/>
                                 <exclude reference="M09-H7-kQk"/>
                             </mask>
@@ -87,23 +92,25 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3uj-yt-jIO"/>
-                                <include reference="XXo-oL-fgx"/>
                                 <include reference="QRK-FH-YRj"/>
+                                <include reference="as8-3r-sOp"/>
+                                <include reference="oSz-fU-9Io"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3dz-7r-sHH"/>
                                 <include reference="GT1-ZN-jhw"/>
-                                <include reference="SHT-Ry-BGp"/>
-                                <include reference="lZq-h0-YgL"/>
+                                <include reference="5yn-nU-AYL"/>
+                                <include reference="fq6-YS-haO"/>
                                 <include reference="8QW-87-9D0"/>
                                 <include reference="M09-H7-kQk"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="QRK-FH-YRj" id="boB-K1-xbd"/>
-                        <outlet property="findOut" destination="XXo-oL-fgx" id="ESV-vm-His"/>
+                        <outlet property="backButton" destination="QRK-FH-YRj" id="Blf-ho-jse"/>
+                        <outlet property="enterTime" destination="as8-3r-sOp" id="pTa-9v-X4G"/>
                         <outlet property="isItDark" destination="3uj-yt-jIO" id="Gr3-5S-j1d"/>
+                        <outlet property="response" destination="oSz-fU-9Io" id="yHD-BP-EXV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
