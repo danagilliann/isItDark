@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Raleway-ExtraBold.ttf">
             <string>Raleway-ExtraBold</string>
         </mutableArray>
         <mutableArray key="Raleway-ExtraLight.ttf">
+            <string>Raleway-ExtraLight</string>
             <string>Raleway-ExtraLight</string>
         </mutableArray>
     </customFonts>
@@ -47,11 +48,24 @@
                                     <action selector="findOutTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ec4-us-uVy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRK-FH-YRj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oWB-Al-ofr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="3uj-yt-jIO" secondAttribute="centerX" id="3dz-7r-sHH"/>
+                            <constraint firstAttribute="centerX" secondItem="QRK-FH-YRj" secondAttribute="centerX" id="8QW-87-9D0"/>
                             <constraint firstItem="3uj-yt-jIO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="210" id="GT1-ZN-jhw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QRK-FH-YRj" secondAttribute="bottom" constant="141" id="M09-H7-kQk"/>
                             <constraint firstAttribute="centerY" secondItem="XXo-oL-fgx" secondAttribute="centerY" id="SHT-Ry-BGp"/>
                             <constraint firstAttribute="centerX" secondItem="XXo-oL-fgx" secondAttribute="centerX" id="lZq-h0-YgL"/>
                         </constraints>
@@ -59,28 +73,35 @@
                             <mask key="subviews">
                                 <exclude reference="3uj-yt-jIO"/>
                                 <exclude reference="XXo-oL-fgx"/>
+                                <exclude reference="QRK-FH-YRj"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3dz-7r-sHH"/>
                                 <exclude reference="GT1-ZN-jhw"/>
                                 <exclude reference="SHT-Ry-BGp"/>
                                 <exclude reference="lZq-h0-YgL"/>
+                                <exclude reference="8QW-87-9D0"/>
+                                <exclude reference="M09-H7-kQk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3uj-yt-jIO"/>
                                 <include reference="XXo-oL-fgx"/>
+                                <include reference="QRK-FH-YRj"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3dz-7r-sHH"/>
                                 <include reference="GT1-ZN-jhw"/>
                                 <include reference="SHT-Ry-BGp"/>
                                 <include reference="lZq-h0-YgL"/>
+                                <include reference="8QW-87-9D0"/>
+                                <include reference="M09-H7-kQk"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="QRK-FH-YRj" id="boB-K1-xbd"/>
                         <outlet property="findOut" destination="XXo-oL-fgx" id="ESV-vm-His"/>
                         <outlet property="isItDark" destination="3uj-yt-jIO" id="Gr3-5S-j1d"/>
                     </connections>
